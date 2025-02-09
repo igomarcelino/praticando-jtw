@@ -14,8 +14,8 @@ public class User {
     private Integer id_user;
 
     private String user_name;
-    private String user_login;
-    private String user_password;
+    private String userLogin;
+    private String userPassword;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "tb_user_roles",
@@ -39,21 +39,21 @@ public class User {
         this.user_name = user_name;
     }
 
-    public String getUser_login()
+    public String getUserLogin()
     {
-        return user_login;
+        return userLogin;
     }
 
-    public void setUser_login(String user_login) {
-        this.user_login = user_login;
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
     }
 
-    public String getUser_password() {
-        return user_password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setUser_password(String user_password) {
-        this.user_password = user_password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public Set<Roles> getRolesSet() {
@@ -68,12 +68,12 @@ public class User {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(user_login, user.user_login);
+        return Objects.equals(userLogin, user.userLogin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(user_login);
+        return Objects.hashCode(userLogin);
     }
 
     @Override
@@ -81,8 +81,8 @@ public class User {
         return "User{" +
                 "id_user=" + id_user +
                 ", user_name='" + user_name + '\'' +
-                ", user_login='" + user_login + '\'' +
-                ", user_password='" + user_password + '\'' +
+                ", user_login='" + userLogin + '\'' +
+                ", user_password='" + userPassword + '\'' +
                 ", rolesSet=" + rolesSet +
                 '}';
     }

@@ -1,3 +1,3 @@
-package com.igomarcelino.treinando_jwt.dto;
+package com.igomarcelino.treinando_jwt.dto.login;
 
 public record LoginRequestDTO (String userLogin, String password){}

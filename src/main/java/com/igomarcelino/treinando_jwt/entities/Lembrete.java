@@ -16,8 +16,18 @@ public class Lembrete {
     @JoinColumn(name = "id_user")
     private User user;
 
+    private String mensagem;
+
     @CreationTimestamp
     private Instant creationTimestamp;
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
 
     public Integer getId_lembrete() {
         return id_lembrete;
